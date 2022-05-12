@@ -1,4 +1,4 @@
-
+"use strict";
 
 import  {Boss} from "./class.js";
 
@@ -37,13 +37,13 @@ switch (randomBoss) {
 let position1 = prompt(`What do you want ${character1.name} to do ? : positionNormal, positionAttack, positionDefense`)
 switch (position1) {
     case "positionNormal":
-        character1.positionNormal
+        character1.positionNormal();
         break;
     case "positionAttack":
-        character1.positionAttack
+        character1.positionAttack();
         break;
     case "positionDefense":
-        character1.positionDefense
+        character1.positionDefense();
         break;
 }
 
@@ -51,26 +51,26 @@ switch (position1) {
 let position2 = prompt(`What do you want ${character2.name} to do ? : positionNormal, positionAttack, positionDefense`)
 switch (position2) {
     case "positionNormal":
-        character2.positionNormal
+        character2.positionNormal();
         break;
     case "positionAttack":
-        character2.positionAttack
+        character2.positionAttack();
         break;
     case "positionDefense":
-        character2.positionDefense
+        character2.positionDefense();
         break;
 }
 
 let position3 = prompt(`What do you want ${character3.name} to do ? : positionNormal, positionAttack, positionDefense`)
 switch (position3) {
     case "positionNormal":
-        character2.positionNormal
+        character3.positionNormal();
         break;
     case "positionAttack":
-        character2.positionAttack
+        character3.positionAttack();
         break;
     case "positionDefense":
-        character2.positionDefense
+        character3.positionDefense();
         break;
 }
 

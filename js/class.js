@@ -10,17 +10,15 @@ export class Warrior{
     }
     positionNormal = () => {
         this.health = this.health;
-        this.strength = this.strength;
-        
+        this.strength = this.strength; 
     }
     positionAttack = () => {
         this.health = this.health * 0.75;
-        this.strength = this.strength * 1.4;
-        
+        this.strength = this.strength * 1.4;   
     }
     positionDefense = () => {
         this.health = this.health * 2.5;
-        this.strength = this.strength * 0.5;
+        this.strength = this.strength * 0.5; 
     }
     combat = (boss) => {
         if  (this.rage >= 4){
@@ -116,6 +114,7 @@ export class Archer{
         combat = (boss) => {
             if (this.arrow >= 2){
                 boss.health = boss.health - this.strength;
+                this.arrow - 2;
                 this.arrow = this.arrow + 1;
             }else if (this.arrow < 2){
                 this.arrow = this.arrow + 6;
