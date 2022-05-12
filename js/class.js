@@ -150,6 +150,7 @@ export class Boss{
             }
             if (riddle1 != answer1){
                 prompt("Game over !")
+                
             } else if (riddle1 == answer1){
                 alert("Congratz you won !!")
             }
@@ -165,6 +166,7 @@ export class Boss{
             }
             if (riddle2 != answer2){
                 alert("Game over !")
+                
             } else if (riddle2 == answer2){
                 alert("Congratz you won !!")
             }
@@ -180,6 +182,7 @@ export class Boss{
             }
             if (riddle3 != answer3){
                 prompt("Game over !")
+                
             } else if (riddle3 == answer3){
                 alert("Congratz you won !!")
             }

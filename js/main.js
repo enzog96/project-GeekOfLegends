@@ -2,9 +2,9 @@
 
 import  {Boss} from "./class.js";
 
-let sauron = new Boss("Sauron",1000, 50);
-let chronos = new Boss("Chronos",1200,100);
-let lilith = new Boss("Lilith",900,150);
+let sauron = new Boss("Sauron",2000, 50);
+let chronos = new Boss("Chronos",2100,100);
+let lilith = new Boss("Lilith",1500,150);
 
 import {Warrior} from "./class.js";
 import {Mage} from "./class.js";
@@ -75,15 +75,21 @@ switch (position3) {
 }
 
 let turn = 1;
-while (CurrentBoss.health > 0 && character1.health > 0 && character2.health > 0 && character3.health > 0){
+while (CurrentBoss.health > 0 || character1.health > 0 && character2.health > 0 && character3.health > 0){
     alert(`The game is about to begin, turn : ${turn}`)
     character1.combat(CurrentBoss)
+    alert(`${CurrentBoss.name} health : ${CurrentBoss.health}`);
+    alert(`${character1.name} health : ${character1.health} - ${character2.name} health : ${character2.health} - ${character3.name} health : ${character3.health}`);
     console.log(CurrentBoss.health)
     console.log(character1, character2, character3)
     character2.combat(CurrentBoss)
+    alert(`${CurrentBoss.name} health : ${CurrentBoss.health}`);
+    alert(`${character1.name} health : ${character1.health} - ${character2.name} health : ${character2.health} - ${character3.name} health : ${character3.health}`);
     console.log(CurrentBoss.health)
     console.log(character1, character2, character3)
     character3.combat(CurrentBoss)
+    alert(`${CurrentBoss.name} health : ${CurrentBoss.health}`);
+    alert(`${character1.name} health : ${character1.health} - ${character2.name} health : ${character2.health} - ${character3.name} health : ${character3.health}`);
     console.log(CurrentBoss.health)
     console.log(character1, character2, character3)
     let randomEnemy = Math.floor(Math.random() * (3 - 1) +1)
@@ -98,7 +104,7 @@ while (CurrentBoss.health > 0 && character1.health > 0 && character2.health > 0 
             CurrentBoss.combat(character3)
             break;
     }
-    if (CurrentBoss.health < (CurrentBoss.health * 0.2)){
+    if (CurrentBoss.health < CurrentBoss.health * 0.2){
         CurrentBoss.riddle()
     }
     alert("End of turn")
